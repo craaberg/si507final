@@ -107,16 +107,6 @@ def get_sportio_player_proj():
     return player_proj_stats_dict
 
 
-# TODO weekly player stats, will build this out if I have time
-# NBR_SEASON_GAMES = 17
-# player_weekly_stats_results = []
-# for week in range(NBR_SEASON_GAMES):
-#     response_sportsdataio_player_weekly_stats = requests.get(f'https://api.sportsdata.io/v3/nfl/stats/json/'
-#                                                          f'PlayerGameStatsByWeek/2021REG/{week+1}?'
-#                                                          f'key={keys.SPORTDATAIO_FANTASY_DATA_KEY}')
-#     player_weekly_stats_results.append(response_sportsdataio_player_weekly_stats.json())
-
-
 def get_espn_player_projections():
     """
     pulls the csv data containing top 300 players and the espn projection for their stats
