@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Table</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<h2>Here are your search results: </h2>
+<p> Search for another player <a href='/search'>here</a></p>
+<p> View players based on salary <a href='/salary'>here</a></p>
+<p> View risky player <a href='/risky'>here</a></p>
+<p> Go back to home page <a href='/'>here</a></p>
+<table class="table">
+    <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell">{{header}}</th>
+        {% endfor %}
+    </tr>
+    <tr class="table__row">
+        <td class="table__cell"> {{player_info[1]}}</td>
+        <td class=table__cell"> {{player_info[2]}}</td>
+        <td class="table__cell"> {{player_info[3]}}</td>
+        <td class="table__cell"> {{player_info[4]}}</td>
+        <td class="table__cell"> {{player_info[5]}}</td>
+        <td class="table__cell"> {{player_info[6]}}</td>
+        <td class="table__cell"> {{player_info[7]}}</td>
+        <td class="table__cell"> {{player_info[8]}}</td>
+        <td class="table__cell"> {{player_info[9]}}</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

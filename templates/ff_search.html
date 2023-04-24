@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<h2> Enter Player last name, position, and team to get their data</h2>
+<form action="/handle_search" method="post">
+    <p> View players based on salary <a href='/salary'>here</a></p>
+    <p> View risky player <a href='/risky'>here</a></p>
+    <p> Go back to home page <a href='/'>here</a></p>
+    <p>
+        Player's last name: <input name="name" type="text"/><br/><br/><br/>
+    </p>
+
+    <p>
+        Select the player's position:
+        <select name ="pos">
+            <option value="wr">WR</option>
+            <option value="rb">RB</option>
+            <option value="qb">QB</option>
+            <option value="te">TE</option>
+            <option value="k">K</option>
+            <option value="wr">WR</option>
+        </select>
+    </p><br>
+
+    <p>
+        Select the player's team:
+
+        <select name ="team">
+            {% for team in team_names %}
+            <option value="{{team_names[team]}}">{{team_names[team]}}</option>
+            {% endfor %}
+        </select>
+
+    </p><br>
+    <p>
+        <br>
+        <input type = 'submit' value = 'Submit'/>
+    </p>
+</form>
+</body>
+</html>

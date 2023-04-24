@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Table</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<h2>Here are players that are injury risk or not meeting expectations</h2>
+<p> Search for a Player <a href='/search'>here</a></p>
+<p> View players based on Salary <a href='/salary'>here</a></p>
+<p> Go back to home page <a href='/'>here</a></p>
+<table class="table">
+    <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell">{{header}}</th>
+        {% endfor %}
+    </tr>
+    {% for row in data %}
+    <tr class="table__row">
+        <td class="table__cell"> {{row.name}}</td>
+        <td class=table__cell"> {{row.pos}}</td>
+        <td class="table__cell"> {{row.team}}</td>
+        <td class="table__cell"> {{row.ly_ffp}}</td>
+        <td class="table__cell"> {{row.proj_ffp}}</td>
+        <td class="table__cell"> {{row.st_dev_proj}}</td>
+        <td class="table__cell"> {{row.games_played}}</td>
+        <td class="table__cell"> {{row.contract_value_str}}</td>
+        <td class="table__cell"> {{row.percent_guaranteed_str}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
